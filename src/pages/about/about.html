@@ -1,11 +1,29 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
+  <ion-navbar color="primary">
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>การรับสวัสดิการ</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+  <ion-list>
+    <ion-item-group>
+      <ion-item-divider color="light">
+        <b>จำนวนเงินที่ได้รับทั้งหมด</b>
+        <ion-note item-end style="color:black;">
+          <b>{{totalAmount}} บาท</b>
+        </ion-note>
+    </ion-item-divider>
+    <button ion-item *ngFor="let receiveWelfare of allReceiveWelfare" (click)="viewDetail(receiveWelfare)">
+        {{receiveWelfare.date}}
+      <ion-note item-end>
+        {{ receiveWelfare.amount }}
+        </ion-note>
+      </button>
+    </ion-item-group>  
+  </ion-list>
 </ion-content>

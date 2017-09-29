@@ -1,0 +1,61 @@
+<!--
+  Generated template for the TransactionDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+      <ion-buttons start>
+          <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title>รายละเอียดการฝากเงิน</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item-group>
+      <ion-item-divider color="light">
+        <ion-icon item-left name="calendar"></ion-icon>
+        <b>วันที่</b>
+        <ion-note item-end style="color:black;">
+          <b>จำนวนเงิน</b>
+        </ion-note>
+      </ion-item-divider>
+      <ion-item>
+          {{transaction.date}}
+          <ion-note item-end style="color:black;">
+            {{transaction.amount}} บาท
+          </ion-note>
+        </ion-item>
+      <ion-item>
+          ประเภทการจ่ายเงิน
+          <ion-note item-end style="color:black;">
+            {{preferPayment}}
+          </ion-note>
+        </ion-item>
+    </ion-item-group>
+    <ion-item-group>
+      <ion-item-divider color="light">
+          <ion-icon item-left name="cash"></ion-icon>
+        <b>งวด</b>
+        <ion-note item-end style="color:black;">
+          <b>ผู้รับเงิน</b>
+        </ion-note>
+      </ion-item-divider>
+      <ion-item>
+        {{transaction.startDate}} - {{transaction.endDate}}
+        <ion-note item-end style="color:black;">
+          ชินวัตร
+        </ion-note>
+      </ion-item>
+    </ion-item-group>
+  </ion-list>
+
+</ion-content>

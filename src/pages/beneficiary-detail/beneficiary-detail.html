@@ -1,0 +1,46 @@
+<!--
+  Generated template for the BeneficiaryDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>รายละเอียดผู้รับผลประโยชน์</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+        <ion-avatar item-left>
+            <img src="assets/img/beneficiary.png">
+        </ion-avatar>
+      {{beneficiary.firstName}} {{beneficiary.lastName}}
+      <p>อายุ {{age}} ปี</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="ionic" item-left></ion-icon>
+      อาชีพ
+      <ion-note item-right>{{beneficiary.occupation}}</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="ionitron" item-left></ion-icon>
+      ความสัมพันธ์
+      <ion-note item-right>{{beneficiary.relationship}}</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="call" item-left></ion-icon>
+      เบอร์โทรศัพท์
+      <ion-note item-right>{{beneficiary.mobileTel}} <br> {{beneficiary.telephoneNumber}}</ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>

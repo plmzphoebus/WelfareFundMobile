@@ -1,3 +1,4 @@
+import { NavController, NavParams } from 'ionic-angular';
 import { Component } from '@angular/core';
 
 import { AboutPage } from '../about/about';
@@ -13,7 +14,8 @@ export class TabsPage {
   tab2Root = AboutPage;
   tab3Root = ContactPage;
 
-  constructor() {
-
+  myIndex:number;
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.myIndex = this.navParams.data.tabIndex || 0;
   }
 }
